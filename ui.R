@@ -32,7 +32,7 @@ navbarPage("Irish Covid19 Dashboard", id="nav",
                     ),
                     fluidRow(
                       column(12,
-                             includeCSS(here::here("Dashboard/styles.css")),
+                             includeCSS(here::here("styles.css")),
                         leaflet::leafletOutput("map", height = 710),
                         absolutePanel(id = "controls", class = "panel panel-default",
                                       fixed = FALSE, top = 15, draggable = TRUE,
@@ -165,7 +165,7 @@ navbarPage("Irish Covid19 Dashboard", id="nav",
                                                     choices = c("Foreign travel", 
                                                                 "Local/Community transmission",
                                                                 "Not specified"),
-                                                    selected = "Not specified"))
+                                                    selected = "Local/Community transmission"))
                     ),
                     fluidRow(
                       column(width = 6, plotly::plotlyOutput("g5")),

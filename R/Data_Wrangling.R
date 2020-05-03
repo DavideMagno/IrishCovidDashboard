@@ -87,7 +87,7 @@ GetRawData <- function() {
   covid.characteristics <- readr::read_csv(url(paste0(file.prefix, 
                                                       "Positive_Characteristics.csv")))
   
-  ireland.regions <- readRDS(here::here("Dashboard/data/gadm36_IRL_1_sp.rds"))
+  ireland.regions <- readRDS(here::here("data/gadm36_IRL_1_sp.rds"))
   
   ireland.regions@data$NAME_1 %<>%
     stringr::str_replace("Laoighis", "Laois") 

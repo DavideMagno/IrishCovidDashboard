@@ -61,7 +61,8 @@ PlotCharacteristicTimeSeries <- function(input) {
   
   data <- input$data %>% 
     dplyr::select(-Ratio) %>% 
-    tidyr::pivot_wider(names_from = `Key 2`, values_from = Value)
+    tidyr::pivot_wider(names_from = `Key 2`, values_from = Value) %>% 
+    dplyr::arrange(Date)
   
   p <- plotly::plot_ly(data, type = 'scatter', 
                        mode = "lines+markers") %>% 
